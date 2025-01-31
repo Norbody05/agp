@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(45deg, #ff6b6b, #ffc3c3);
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+fieldset {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+    margin-top: 2rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+h1 {
+    color: #ff4b6e;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2s ease;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+    max-width: 600px;
+    animation: slideUp 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.love-question {
+    margin-top: 2rem;
+}
+
+.love-btn {
+    background: #ff4b6e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    margin-top: 1rem;
+}
+
+.love-btn:hover {
+    background: #ff2d55;
+    transform: scale(1.05);
+}
+
+input[type="text"] {
+    padding: 8px 15px;
+    border: 2px solid #ffc3c3;
+    border-radius: 20px;
+    margin: 10px 0;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #ff4b6e;
+}
+
+#response {
+    font-weight: bold;
+    margin-top: 1rem;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Add these media queries at the end of your existing CSS */
+
+@media screen and (max-width: 768px) {
+    fieldset {
+        width: 85% !important;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .love-question {
+        margin-top: 1.5rem;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        max-width: 250px;
+        margin: 8px 0;
+    }
+
+    .love-btn {
+        width: 80%;
+        max-width: 250px;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    fieldset {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    #response {
+        font-size: 0.9rem;
+        padding: 0 5px;
+    }
+}

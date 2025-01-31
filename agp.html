@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agp</title>
+</head>
+<link rel="stylesheet" href="agp.css">
+
+<body>
+
+    <center>
+
+        <fieldset>
+            
+        <h1>
+            A special Message 
+        </h1>
+
+        <p>
+            My heart feels like a hummingbird,
+             constantly fluttering whenever you're near. 
+              It's a dizzy, joyful feeling, 
+              like sunshine after a long rain. 
+               I've been trying to find the right words, 
+               but they all seem too small.  
+               So, I'll just be honest:  I really, really love you.  
+            And... well,
+            
+        </p>
+
+        <div class="love-question">
+            <h2>Do you also love me?</h2>
+            <input type="text" id="loveAnswer" placeholder="Your answer...">
+            <br>
+            
+            <button onclick="checkLoveAnswer()" class="love-btn">Submit Answer</button>
+            <p id="response"></p>
+        </div>
+        <script>
+            function checkLoveAnswer() {
+                const answer = document.getElementById('loveAnswer').value.toLowerCase();
+                const responseElement = document.getElementById('response');
+                
+                if (answer.includes('yes') || answer.includes('love')) {
+                    responseElement.innerHTML = "💖 I knew it! I really love U Darling! 💖";
+                    responseElement.style.color = "#ff4b6e";
+                } else if (answer.includes('no')) {
+                    responseElement.innerHTML = "💔 Maybe one day... 💔";
+                    responseElement.style.color = "#666";
+                } else {
+                    responseElement.innerHTML = "💭 Please answer with yes or no 💭";
+                    responseElement.style.color = "#888";
+                }
+            }
+        </script>
+   
+
+
+        </fieldset>
+    </center>
+    
+</body>
+</html>
